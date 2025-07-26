@@ -54,9 +54,7 @@ Nama Mahasiswa: Elisa Bayu Hendra
 NIM: 233401015
 Dosen: Jeems Terri Agustinus, S.Kom
 Mata Kuliah: IF24205 - Prinsip Pengembangan Perangkat Lunak
-Tanggal Pengumpulan: 28 Juli 2025
-Sifat Ujian: Take-home project
 
-##Lisensi:
+## Lisensi:
 
 Proyek ini dibuat untuk keperluan pembelajaran akademik dan tidak digunakan untuk tujuan komersial.
