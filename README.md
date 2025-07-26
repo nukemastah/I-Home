@@ -1,10 +1,10 @@
 README.md
 
-#I-HOUSE - Smart Home Solutions Website
+# I-HOUSE - Smart Home Solutions Website
 
-##Website ini dikembangkan sebagai bagian dari Ujian Akhir Semester (UAS) mata kuliah Prinsip Pengembangan Perangkat Lunak. Proyek ini bertujuan untuk membangun website multi-halaman interaktif untuk layanan solusi rumah pintar (Smart Home Solutions).
+## Website ini dikembangkan sebagai bagian dari Ujian Akhir Semester (UAS) mata kuliah Prinsip Pengembangan Perangkat Lunak. Proyek ini bertujuan untuk membangun website multi-halaman interaktif untuk layanan solusi rumah pintar (Smart Home Solutions).
 
-##Daftar Halaman:
+## Daftar Halaman:
 
 index.html (Homepage)
 Hero section dengan background gambar dan efek ketik otomatis (Typed.js)
@@ -37,11 +37,11 @@ FAQ interaktif
 
 HTML, CSS, JavaScript AOS.js untuk animasi saat scroll Typed.js untuk efek mengetik Font Awesome untuk ikon Google Maps Embed CSS Grid dan Flexbox untuk layout responsive
 
-##Struktur Folder:
+## Struktur Folder:
 
 i-house ├── index.html ├── about.html ├── services.html ├── portfolio.html ├── contact.html ├── css/ │ └── style.css ├── js/ │ └── script.js ├── assets/ │ └── images/ └── README.md
 
-##Cara Menjalankan:
+## Cara Menjalankan:
 
 Download atau clone folder proyek
 Buka file index.html di browser
@@ -57,6 +57,6 @@ Mata Kuliah: IF24205 - Prinsip Pengembangan Perangkat Lunak
 Tanggal Pengumpulan: 28 Juli 2025
 Sifat Ujian: Take-home project
 
-Lisensi:
+##Lisensi:
 
 Proyek ini dibuat untuk keperluan pembelajaran akademik dan tidak digunakan untuk tujuan komersial.
