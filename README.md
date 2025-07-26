@@ -2,75 +2,51 @@ README.md
 
 #I-HOUSE - Smart Home Solutions Website
 
-##Website ini dikembangkan sebagai bagian dari Ujian Akhir Semester (UAS) mata kuliah Prinsip Pengembangan Perangkat Lunak.
-Proyek ini bertujuan untuk membangun website multi-halaman interaktif untuk layanan solusi rumah pintar (Smart Home Solutions).
+##Website ini dikembangkan sebagai bagian dari Ujian Akhir Semester (UAS) mata kuliah Prinsip Pengembangan Perangkat Lunak. Proyek ini bertujuan untuk membangun website multi-halaman interaktif untuk layanan solusi rumah pintar (Smart Home Solutions).
 
 ##Daftar Halaman:
 
-1. index.html (Homepage)
-  - Hero section dengan background gambar dan efek ketik otomatis (Typed.js)
-  - Statistik interaktif (counter animasi)
-  - Navigasi responsive dengan hamburger menu
-  - Fitur layanan dengan efek hover
-  - Carousel testimonial otomatis
-  - Scroll smooth ke section lain
-  - Footer global
-
-2. about.html
-  - Timeline sejarah perusahaan
-  - Kartu tim dengan ukuran gambar seragam
-  - Statistik perusahaan (counter)
-  - Nilai-nilai perusahaan
-
-3. services.html
-  - Daftar layanan lengkap
-  - Filter layanan berdasarkan kategori
-  - Kalkulator estimasi biaya (form dinamis)
-  - Tabel perbandingan paket layanan
-
-4. portfolio.html
-  - Galeri proyek dengan grid layout
-  - Filter proyek berdasarkan jenis
-  - Testimoni spesifik per proyek
-
-5. contact.html
-  - Formulir kontak validasi real-time
-  - Google Maps lokasi (Office 8 @ Senopati)
-  - Simulasi live chat (dummy)
-  - FAQ interaktif
-
+index.html (Homepage)
+Hero section dengan background gambar dan efek ketik otomatis (Typed.js)
+Statistik interaktif (counter animasi)
+Navigasi responsive dengan hamburger menu
+Fitur layanan dengan efek hover
+Carousel testimonial otomatis
+Scroll smooth ke section lain
+Footer global
+about.html
+Timeline sejarah perusahaan
+Kartu tim dengan ukuran gambar seragam
+Statistik perusahaan (counter)
+Nilai-nilai perusahaan
+services.html
+Daftar layanan lengkap
+Filter layanan berdasarkan kategori
+Kalkulator estimasi biaya (form dinamis)
+Tabel perbandingan paket layanan
+portfolio.html
+Galeri proyek dengan grid layout
+Filter proyek berdasarkan jenis
+Testimoni spesifik per proyek
+contact.html
+Formulir kontak validasi real-time
+Google Maps lokasi (Office 8 @ Senopati)
+Simulasi live chat (dummy)
+FAQ interaktif
 ##Teknologi yang Digunakan:
 
-HTML, CSS, JavaScript
-AOS.js untuk animasi saat scroll
-Typed.js untuk efek mengetik
-Font Awesome untuk ikon
-Google Maps Embed
-CSS Grid dan Flexbox untuk layout responsive
+HTML, CSS, JavaScript AOS.js untuk animasi saat scroll Typed.js untuk efek mengetik Font Awesome untuk ikon Google Maps Embed CSS Grid dan Flexbox untuk layout responsive
 
 ##Struktur Folder:
 
-i-house
-├── index.html
-├── about.html
-├── services.html
-├── portfolio.html
-├── contact.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── assets/
-│   └── images/
-└── README.md
+i-house ├── index.html ├── about.html ├── services.html ├── portfolio.html ├── contact.html ├── css/ │ └── style.css ├── js/ │ └── script.js ├── assets/ │ └── images/ └── README.md
 
 ##Cara Menjalankan:
 
-1. Download atau clone folder proyek
-2. Buka file index.html di browser
-3. Pastikan semua file dan folder tetap dalam struktur yang sama
-4. Disarankan menjalankan dengan Live Server (jika pakai VS Code)
-
+Download atau clone folder proyek
+Buka file index.html di browser
+Pastikan semua file dan folder tetap dalam struktur yang sama
+Disarankan menjalankan dengan Live Server (jika pakai VS Code)
 
 ## Informasi Creator:
 
