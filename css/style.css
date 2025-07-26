@@ -83,7 +83,7 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url('/images/background.jpeg');
+  background-image: url('../images/background.jpeg');
   background-size: cover;
   background-position: center;
   position: relative;
