@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | I-HOUSE</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">I-HOUSE</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1 class="page-title">Contact Us</h1>
+    <p class="page-subtitle">We’d love to hear from you</p>
+  </header>
+
+  <!-- CONTACT FORM -->
+  <section class="contact-section">
+    <div class="contact-form">
+      <h2>Send us a message</h2>
+      <form id="contactForm">
+        <label>Name:
+          <input type="text" name="name" required />
+        </label>
+        <label>Email:
+          <input type="email" name="email" required />
+        </label>
+        <label>Message:
+          <textarea name="message" required minlength="10"></textarea>
+        </label>
+        <button type="submit">Send</button>
+        <div id="form-msg"></div>
+      </form>
+    </div>
+
+    <!-- GOOGLE MAP -->
+<!-- GOOGLE MAP -->
+<div class="map-section">
+  <h2>Our Office</h2>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.329328287664!2d106.8028989!3d-6.2297295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1a04d5ff145%3A0xcbae36e958f80d6a!2sOffice%208%20%40%20Senopati!5e0!3m2!1sen!2sid!4v1721637264836!5m2!1sen!2sid"
+    width="100%" height="300" style="border:0;" allowfullscreen loading="lazy">
+  </iframe>
+</div>
+
+
+    </div>
+  </section>
+
+  <!-- LIVE CHAT SIMULATION -->
+  <section class="chat-simulation">
+    <h2>Live Chat (Simulated)</h2>
+    <div class="chat-box">
+      <div class="chat-message user">Hi, is I-HOUSE compatible with Alexa?</div>
+      <div class="chat-message bot">Yes! I-HOUSE integrates with Alexa, Google Assistant, and more.</div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <input type="text" id="faq-search" placeholder="Search FAQ..." />
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">Can I install it myself?</button>
+        <div class="faq-answer">Yes, we offer DIY kits with full guidance.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Is it secure?</button>
+        <div class="faq-answer">Our system uses bank-grade encryption for your safety.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What if my Wi-Fi goes down?</button>
+        <div class="faq-answer">You’ll still have limited offline control via Bluetooth.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 I-HOUSE. All rights reserved.</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    // Validasi Form Kontak
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = this.name.value.trim();
+      const email = this.email.value.trim();
+      const message = this.message.value.trim();
+      const msgBox = document.getElementById("form-msg");
+
+      if (!name || !email || message.length < 10) {
+        msgBox.textContent = "Please complete all fields correctly.";
+        msgBox.style.color = "red";
+      } else {
+        msgBox.textContent = "Message sent successfully!";
+        msgBox.style.color = "green";
+        this.reset();
+      }
+    });
+
+    // FAQ Accordion
+    const faqButtons = document.querySelectorAll(".faq-question");
+    faqButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.nextElementSibling.classList.toggle("show");
+      });
+    });
+
+    // FAQ Search
+    const faqSearch = document.getElementById("faq-search");
+    faqSearch.addEventListener("input", () => {
+      const value = faqSearch.value.toLowerCase();
+      document.querySelectorAll(".faq-item").forEach(item => {
+        const question = item.querySelector(".faq-question").textContent.toLowerCase();
+        item.style.display = question.includes(value) ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>

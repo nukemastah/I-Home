@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | I-HOUSE</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <h1 class="logo">I-HOUSE</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <header class="page-header">
+    <h1 class="page-title">Our Services</h1>
+    <p class="page-subtitle">Flexible, powerful, and tailored to your home</p>
+  </header>
+
+  <!-- SERVICE CATALOG FILTERING -->
+  <section class="service-catalog" id="catalog">
+    <h2>Service Catalog</h2>
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="security">Security</button>
+      <button class="filter-btn" data-filter="lighting">Lighting</button>
+      <button class="filter-btn" data-filter="energy">Energy</button>
+    </div>
+
+    <div class="service-grid">
+      <div class="service-card" data-category="security">
+        <h3>Smart Door Lock</h3>
+        <p>Keyless entry with remote access and activity logs.</p>
+      </div>
+      <div class="service-card" data-category="lighting">
+        <h3>Motion Sensor Lights</h3>
+        <p>Auto-lighting based on movement detection.</p>
+      </div>
+      <div class="service-card" data-category="energy">
+        <h3>Power Consumption Tracker</h3>
+        <p>Real-time energy usage and analytics dashboard.</p>
+      </div>
+      <div class="service-card" data-category="security">
+        <h3>Smart CCTV</h3>
+        <p>Stream and record your home 24/7 with AI alerts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICE CALCULATOR -->
+  <section class="price-calculator" id="calculator">
+    <h2>Estimate Your Package</h2>
+    <form id="calculator-form">
+      <label>
+        Number of Rooms:
+        <input type="number" name="rooms" min="1" value="1" />
+      </label>
+      <label>
+        Select Services:
+        <select name="services" multiple>
+          <option value="200">Smart Lighting ($200)</option>
+          <option value="300">Security System ($300)</option>
+          <option value="150">Energy Tracker ($150)</option>
+        </select>
+      </label>
+      <button type="submit">Calculate</button>
+    </form>
+    <div id="total-cost">Estimated Cost: $0</div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="comparison-table" id="comparison">
+    <h2>Compare Our Packages</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Features</th>
+          <th>Basic</th>
+          <th>Premium</th>
+          <th>Custom</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Smart Lighting</td>
+          <td>✔</td>
+          <td>✔</td>
+          <td>Optional</td>
+        </tr>
+        <tr>
+          <td>Security System</td>
+          <td>✖</td>
+          <td>✔</td>
+          <td>Optional</td>
+        </tr>
+        <tr>
+          <td>Energy Monitoring</td>
+          <td>✖</td>
+          <td>✔</td>
+          <td>Optional</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- CUSTOM PACKAGE FORM -->
+  <section class="custom-package" id="custom">
+    <h2>Build Your Own Package</h2>
+    <form class="custom-form">
+      <label>Type of Home:
+        <select name="homeType">
+          <option>Apartment</option>
+          <option>House</option>
+          <option>Office</option>
+        </select>
+      </label>
+      <label>Include:
+        <input type="checkbox" name="options" value="lighting" /> Smart Lighting
+        <input type="checkbox" name="options" value="security" /> Security
+        <input type="checkbox" name="options" value="energy" /> Energy Monitoring
+      </label>
+      <textarea placeholder="Additional requests..."></textarea>
+      <button type="submit">Submit Request</button>
+    </form>
+  </section>
+
+  <script>
+    // FILTERING
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.service-card');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        cards.forEach(card => {
+          card.style.display = (filter === 'all' || card.dataset.category === filter) ? 'block' : 'none';
+        });
+      });
+    });
+
+    // PRICE CALCULATOR
+    document.getElementById('calculator-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const rooms = parseInt(this.rooms.value);
+      const selected = [...this.services.selectedOptions];
+      const total = selected.reduce((acc, opt) => acc + parseInt(opt.value), 0) * rooms;
+      document.getElementById('total-cost').innerText = `Estimated Cost: $${total}`;
+    });
+  </script>
+  <!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2025 I-HOUSE. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
